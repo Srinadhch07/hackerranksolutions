@@ -79,6 +79,23 @@ e-d-c-b-a-b-c-d-e
 --------e--------
 '''
 
+#fixed Solution
+import string
+def print_rangoli(size):
+    design=string.ascii_lowercase
+    L = []
+    for i in range(n):
+        s = "-".join(design[i:n])
+        L.append((s[::-1]+s[1:]).center(4*n-3, "-"))
+    print("\n".join(L[::-1]+L[1:]))
+   
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
+
+----------------------------------------------------------------------------------------------------------------
+
 import string
 def print_rangoli(size):
     design=string.ascii_lowercase
@@ -86,7 +103,7 @@ def print_rangoli(size):
         s="-".join(design[i:n])
         print((s[::-1]+s[1:]).center(3*n+2,"-")) # you can use 4*n-3 or 5*n-8
     for i in range(1,n):
-        s="-".join(design[i:n]) # aplhabets prints one by one with adding - synbo;s
+        s="-".join(design[i:n]) # aplhabets prints one by one with adding - synbols
         print((s[::-1]+s[1:]).center(3*n+2,"-"))
    
 
