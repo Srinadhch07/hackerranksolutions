@@ -55,6 +55,30 @@ Sample Input
 18 60
 10 50
 '''
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+no_shoes=eval(input())
+sizes=Counter(map(int,input().split()))
+#print(sizes)
+no_cus=eval(input())
+count=0
+size_cost=[]
+for i in range(no_cus):
+    each_cus=input().split()
+    size_cost.append(each_cus)
+#print(size_cost)
+for i in range(no_cus):
+    # now we gonna retrive the sizes from customer and check in given sizes
+    if sizes[int(size_cost[i][0])]:
+        count+=int(size_cost[i][1])
+        sizes[int(size_cost[i][0])]-=1
+print(count)
+
+
+
+
+   
+#----------------------------------------------------------------------
 
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
